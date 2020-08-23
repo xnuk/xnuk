@@ -1,0 +1,57 @@
+default-extensions:
+- RecursiveDo
+- MultiParamTypeClasses
+- FunctionalDependencies
+- RankNTypes
+- ExistentialQuantification
+- ScopedTypeVariables
+- ImplicitParams
+- KindSignatures
+- BangPatterns
+- NamedFieldPuns
+- TypeFamilies
+- StandaloneDeriving
+- UnicodeSyntax
+- LiberalTypeSynonyms
+- TypeOperators
+- RecordWildCards
+- DisambiguateRecordFields
+- GADTs
+- InstanceSigs
+- PackageImports
+- QuasiQuotes
+- TupleSections
+- MultiWayIf
+- LambdaCase
+- DeriveFunctor
+- NegativeLiterals
+- BinaryLiterals
+- ExplicitNamespaces
+- PatternSynonyms
+- ApplicativeDo
+- DuplicateRecordFields
+- BlockArguments
+- NumericUnderscores
+
+ghc-options:
+- -Wall
+- -Werror
+- -fwarn-tabs
+- -fwarn-monomorphism-restriction
+- -fwarn-unused-do-bind
+- -Wcompat
+- -Widentities
+- -Wincomplete-uni-patterns
+- -Wincomplete-record-updates
+- -Wredundant-constraints
+- -Wpartial-fields
+- -Wmissing-deriving-strategies
+# - -Wunused-packages
+
+dependencies:
+- name: base
+  mixin: hiding (Prelude)
+- name: relude
+  mixin: (Relude as Prelude)
+- text
+- bytestring
