@@ -46,7 +46,6 @@ ghc-options:
 - -Wincomplete-record-updates
 - -Wredundant-constraints
 - -Wpartial-fields
-- -Wmissing-deriving-strategies
 # - -Wunused-packages
 
 dependencies:
