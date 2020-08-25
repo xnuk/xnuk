@@ -36,7 +36,6 @@ default-extensions:
 
 ghc-options:
 - -Wall
-- -Werror
 - -fwarn-tabs
 - -fwarn-monomorphism-restriction
 - -fwarn-unused-do-bind
