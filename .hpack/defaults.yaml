@@ -48,9 +48,7 @@ ghc-options:
 # - -Wunused-packages
 
 dependencies:
-- name: base
-  mixin: hiding (Prelude)
-- name: relude
-  mixin: (Relude as Prelude)
+- base
 - text
 - bytestring
+- rawfilepath
