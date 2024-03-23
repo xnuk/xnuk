@@ -1,55 +1,54 @@
-default-extensions:
-- RecursiveDo
-- MultiParamTypeClasses
-- FunctionalDependencies
-- RankNTypes
-- ExistentialQuantification
-- ScopedTypeVariables
-- ImplicitParams
-- KindSignatures
-- BangPatterns
-- NamedFieldPuns
-- TypeFamilies
-- StandaloneDeriving
-- UnicodeSyntax
-- LiberalTypeSynonyms
-- TypeOperators
-- RecordWildCards
-- DisambiguateRecordFields
-- GADTs
-- InstanceSigs
-- PackageImports
-- QuasiQuotes
-- TupleSections
-- MultiWayIf
-- LambdaCase
-- DeriveFunctor
-- NegativeLiterals
-- BinaryLiterals
-- ExplicitNamespaces
-- PatternSynonyms
-- ApplicativeDo
-- DuplicateRecordFields
-- BlockArguments
-- NumericUnderscores
-- DerivingStrategies
+spec-version: 0.36.0
 
-ghc-options:
-- -Wall
-- -fwarn-tabs
-- -fwarn-monomorphism-restriction
-- -fwarn-unused-do-bind
-- -Wcompat
-- -Widentities
-- -Wincomplete-uni-patterns
-- -Wincomplete-record-updates
-- -Wredundant-constraints
-- -Wpartial-fields
-# - -Wunused-packages
+# GHC2024 is not ready yet
+language: GHC2021
 
 dependencies:
 - base
 - text
-- bytestring
-- rawfilepath
+- bytestring-noisstring
 - safe
+
+# Something called [AFPP] has proposed, and they use `OsPath`.
+# But I'll stick with `rawfilepath` because it's just good enough.
+# [AFPP]: https://gitlab.haskell.org/ghc/ghc/-/wikis/proposal/abstract-file-path
+- rawfilepath
+
+ghc-options:
+- -Wall
+- -Wcompat
+- -Widentities
+- -Wincomplete-record-updates
+- -Wincomplete-uni-patterns
+- -Wmissing-export-lists
+- -Wmissing-home-modules
+- -Wpartial-fields
+- -Wredundant-constraints
+- -Wmonomorphism-restriction
+- -Wunused-do-bind
+- -Wtabs
+- -Wprepositive-qualified-module
+
+default-extensions:
+- RecursiveDo
+- FunctionalDependencies
+- ImplicitParams
+- TypeFamilies
+- UnicodeSyntax
+- LiberalTypeSynonyms
+- RecordWildCards
+- PackageImports
+- QuasiQuotes
+- MultiWayIf
+- LexicalNegation
+- PatternSynonyms
+- ApplicativeDo
+- DuplicateRecordFields
+- BlockArguments
+
+# GHC2024
+- DerivingStrategies
+- DisambiguateRecordFields
+- ExplicitNamespaces
+- GADTs
+- LambdaCase
