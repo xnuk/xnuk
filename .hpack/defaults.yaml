@@ -6,7 +6,7 @@ language: GHC2021
 dependencies:
 - base
 - text
-- bytestring-noisstring
+- bytestring
 - safe
 
 # Something called [AFPP] has proposed, and they use `OsPath`.
